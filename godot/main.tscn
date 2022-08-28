@@ -1,0 +1,178 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://assets/putup-tiles.png" type="Texture" id=1]
+[ext_resource path="res://main.gd" type="Script" id=2]
+[ext_resource path="res://assets/putup-sprites.png" type="Texture" id=3]
+[ext_resource path="res://Play.tscn" type="PackedScene" id=4]
+
+[sub_resource type="TileSet" id=1]
+0/name = "putup-tiles.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 256, 40 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 8, 8 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 112, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ SubResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 80, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 112, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 80, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 16, 32, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [ SubResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ SubResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Play" parent="." instance=ExtResource( 4 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 2, 1, 0, 2, 2, 0, 2, 3, 0, 2, 4, 0, 2, 5, 0, 2, 6, 0, 2, 7, 0, 2, 65544, 0, 2, 65545, 0, 2, 65546, 0, 2, 65547, 0, 2, 65548, 0, 2, 65549, 0, 2, 65550, 0, 2, 65551, 0, 2, 131088, 0, 1, 131089, 0, 2, 131090, 0, 2, 131091, 0, 2, 131092, 0, 2, 131093, 0, 2, 131094, 0, 2, 131095, 0, 2, 196632, 0, 2, 196633, 0, 2, 196634, 0, 2, 196635, 0, 2, 196636, 0, 2, 196637, 0, 2, 196638, 0, 2, 196639, 0, 2, 262154, 0, 3, 393237, 0, 3 )
+
+[node name="Exit1" type="AnimatedSprite" parent="."]
+self_modulate = Color( 0.639216, 0.639216, 0.639216, 1 )
+position = Vector2( 18, 25 )
+frames = SubResource( 19 )
+centered = false
+
+[node name="Potap1" type="AnimatedSprite" parent="."]
+position = Vector2( 44, 59 )
+frames = SubResource( 9 )
+centered = false
+
+[node name="Potap2" type="AnimatedSprite" parent="."]
+self_modulate = Color( 0.639216, 0.639216, 0.639216, 1 )
+position = Vector2( 18, 25 )
+frames = SubResource( 17 )
+centered = false
+
+[node name="Evil2" type="AnimatedSprite" parent="."]
+self_modulate = Color( 0.886275, 0.823529, 0.0666667, 1 )
+position = Vector2( 23, 80 )
+frames = SubResource( 23 )
+centered = false
+
+[node name="Evil1" type="AnimatedSprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 23, 80 )
+frames = SubResource( 21 )
+centered = false
