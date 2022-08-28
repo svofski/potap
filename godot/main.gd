@@ -764,7 +764,7 @@ func process_player():
 
 # 4 = lemons, 7 = rats
 func restart_game():
-	level_num = 7
+	level_num = 1
 	score = 0
 	score_step = 2000
 	remaining = 3
