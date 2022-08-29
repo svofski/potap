@@ -890,9 +890,9 @@ func _process(delta):
 
 func _unhandled_key_input(event):
 	match event.as_text():
-		'A':	stick[0] = event.is_pressed()
-		'D':	stick[1] = event.is_pressed()
-		'W':	stick[2] = event.is_pressed()
-		'S': 	stick[3] = event.is_pressed()
-		'Space':stick[4] = event.is_pressed()
-		
+		'A', 'Left' :	stick[0] = event.is_pressed()
+		'D', 'Right':	stick[1] = event.is_pressed()
+		'W', 'Up'	:	stick[2] = event.is_pressed()
+		'S', 'Down' : 	stick[3] = event.is_pressed()
+		'Space', 'Shift', 'Control', 'Alt':
+						stick[4] = event.is_pressed()
