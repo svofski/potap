@@ -1,4 +1,4 @@
-# Put-Up by Yuichi Ago
+# Put-Up by Yuichi Ago-san (吾郷裕一さん)
 
 Originally published in MSX Magazine 1987-10
 https://archive.org/details/MSXmagazine198710S/page/n205/mode/2up
